@@ -426,6 +426,30 @@ animation: float 3s ease-in-out infinite;
   const analytics = getAnalytics(app);
 </script>
 </head>
+  <!-- REGISTER SECTION -->
+<section style="padding:60px; background:#ffffff; text-align:center;">
+  <h2>Create Your Account</h2>
+
+  <input id="name" placeholder="Full Name" style="padding:10px;margin:10px;width:250px;"><br>
+
+  <input id="email" placeholder="Email" type="email"
+    style="padding:10px;margin:10px;width:250px;"><br>
+
+  <input id="password" placeholder="Password" type="password"
+    style="padding:10px;margin:10px;width:250px;"><br>
+
+  <select id="role" style="padding:10px;margin:10px;width:270px;">
+    <option value="freelancer">Freelancer</option>
+    <option value="client">Client</option>
+  </select><br>
+
+  <button onclick="registerUser()" 
+    style="padding:12px 25px;background:#1dbf73;color:white;border:none;">
+    Register
+  </button>
+
+  <p id="msg"></p>
+</section>
 <body>
 
 <nav>
