@@ -4,213 +4,532 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SkillBridge - Freelancing Marketplace</title>
-
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
 <style>
-body{
-margin:0;
-font-family:Segoe UI;
-background:#f7f7f7;
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav{
-background:white;
-padding:15px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+:root {
+--primary: #1dbf73;
+--primary-dark: #19a463;
+--secondary: #404145;
+--accent: #ff62ad;
+--bg: #f7f7f7;
+--white: #ffffff;
 }
 
-.logo{
-font-size:22px;
-font-weight:bold;
+body {
+background: var(--bg);
+color: var(--secondary);
+line-height: 1.6;
 }
 
-.logo span{color:#1dbf73;}
-
-.btn{
-padding:10px 18px;
-border:none;
-cursor:pointer;
-border-radius:5px;
-font-weight:bold;
+nav {
+background: var(--white);
+padding: 1rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+position: sticky;
+top: 0;
+z-index: 1000;
 }
 
-.btn-primary{
-background:#1dbf73;
-color:white;
+.logo {
+font-size: 1.8rem;
+font-weight: 800;
+color: var(--secondary);
+text-decoration: none;
 }
 
-.hero{
-padding:80px 5%;
-text-align:center;
-background:linear-gradient(135deg,#0d084d,#1dbf73);
-color:white;
+.logo span {
+color: var(--primary);
 }
 
-.hero h1{
-font-size:42px;
+.nav-links {
+display: flex;
+gap: 2rem;
+align-items: center;
 }
 
-.features{
-padding:60px 5%;
-text-align:center;
+.nav-links a {
+text-decoration: none;
+color: var(--secondary);
+font-weight: 500;
+transition: color 0.3s;
 }
 
-.feature-card{
-background:white;
-padding:20px;
-margin:15px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+.nav-links a:hover {
+color: var(--primary);
 }
 
-#registerBox{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-justify-content:center;
-align-items:center;
-z-index:9999;
+.btn {
+padding: 0.8rem 1.5rem;
+border-radius: 4px;
+text-decoration: none;
+font-weight: 600;
+transition: all 0.3s;
+border: none;
+cursor: pointer;
+display: inline-block;
+}
+
+.btn-primary {
+background: var(--primary);
+color: white;
+}
+
+.btn-primary:hover {
+background: var(--primary-dark);
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(29, 191, 115, 0.3);
+}
+
+.btn-outline {
+border: 2px solid var(--secondary);
+color: var(--secondary);
+background: transparent;
+}
+
+.btn-outline:hover {
+background: var(--secondary);
+color: white;
+}
+
+.hero {
+background: linear-gradient(135deg, #0d084d 0%, #1dbf73 100%);
+color: white;
+padding: 5rem 5%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+align-items: center;
+min-height: 80vh;
+}
+
+.hero-content h1 {
+font-size: 3.5rem;
+line-height: 1.2;
+margin-bottom: 1.5rem;
+font-weight: 700;
+}
+
+.hero-content p {
+font-size: 1.25rem;
+margin-bottom: 2rem;
+opacity: 0.9;
+}
+
+.search-box {
+background: white;
+padding: 1rem;
+border-radius: 8px;
+display: flex;
+gap: 1rem;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.search-box input {
+flex: 1;
+border: none;
+outline: none;
+font-size: 1rem;
+padding: 0.5rem;
+}
+
+.hero-stats {
+display: flex;
+gap: 2rem;
+margin-top: 3rem;
+}
+
+.stat {
+text-align: center;
+}
+
+.stat h3 {
+font-size: 2rem;
+font-weight: 700;
+}
+
+.hero-visual {
+position: relative;
+}
+
+.hero-card {
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+border-radius: 16px;
+padding: 2rem;
+border: 1px solid rgba(255,255,255,0.2);
+}
+
+.freelancer-preview {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-bottom: 1rem;
+padding: 1rem;
+background: rgba(255,255,255,0.1);
+border-radius: 8px;
+}
+
+.avatar {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: linear-gradient(45deg, #ff62ad, #ffb347);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+color: white;
+}
+
+.features {
+padding: 5rem 5%;
+background: var(--white);
+}
+
+.section-title {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 3rem;
+color: var(--secondary);
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.feature-card {
+padding: 2rem;
+border-radius: 12px;
+background: var(--bg);
+text-align: center;
+transition: transform 0.3s;
+border: 2px solid transparent;
+}
+
+.feature-card:hover {
+transform: translateY(-5px);
+border-color: var(--primary);
+}
+
+.feature-icon {
+font-size: 3rem;
+color: var(--primary);
+margin-bottom: 1rem;
+}
+
+.how-it-works {
+padding: 5rem 5%;
+background: var(--bg);
+}
+
+.steps {
+display: flex;
+justify-content: space-between;
+max-width: 1000px;
+margin: 0 auto;
+position: relative;
+}
+
+.steps::before {
+content: '';
+position: absolute;
+top: 30px;
+left: 20%;
+right: 20%;
+height: 4px;
+background: var(--primary);
+z-index: 0;
+}
+
+.step {
+text-align: center;
+position: relative;
+z-index: 1;
+background: var(--bg);
+padding: 0 1rem;
+}
+
+.step-number {
+width: 60px;
+height: 60px;
+background: var(--primary);
+color: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+font-weight: bold;
+margin: 0 auto 1rem;
+}
+
+.categories {
+padding: 5rem 5%;
+background: var(--white);
+}
+
+.category-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 1.5rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.category-card {
+background: var(--bg);
+padding: 2rem;
+border-radius: 8px;
+text-align: center;
+cursor: pointer;
+transition: all 0.3s;
+border: 2px solid transparent;
+}
+
+.category-card:hover {
+border-color: var(--primary);
+transform: scale(1.05);
+}
+
+.category-card i {
+font-size: 2.5rem;
+color: var(--secondary);
+margin-bottom: 1rem;
+display: block;
+}
+
+.trust {
+background: var(--secondary);
+color: white;
+padding: 4rem 5%;
+text-align: center;
+}
+
+.trust-logos {
+display: flex;
+justify-content: center;
+gap: 3rem;
+margin-top: 2rem;
+opacity: 0.6;
+font-size: 1.5rem;
+font-weight: bold;
+flex-wrap: wrap;
+}
+
+.cta {
+padding: 5rem 5%;
+text-align: center;
+background: linear-gradient(135deg, #f7f7f7 0%, #e8f5e9 100%);
+}
+
+.cta h2 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+
+footer {
+background: #222;
+color: #999;
+padding: 3rem 5%;
+text-align: center;
+}
+
+.footer-links {
+display: flex;
+justify-content: center;
+gap: 2rem;
+margin-bottom: 2rem;
+flex-wrap: wrap;
+}
+
+.footer-links a {
+color: #999;
+text-decoration: none;
+}
+
+.footer-links a:hover {
+color: var(--primary);
+}
+
+@media (max-width: 768px) {
+.hero {
+grid-template-columns: 1fr;
+text-align: center;
+}
+
+.hero-content h1 {
+font-size: 2.5rem;
+}
+
+.steps {
+flex-direction: column;
+gap: 2rem;
+}
+
+.steps::before {
+display: none;
+}
+
+.nav-links {
+display: none;
+}
+
+.hero-stats {
+justify-content: center;
+}
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+}
+
+.floating {
+animation: float 3s ease-in-out infinite;
 }
 </style>
-</head>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCKCAcsZRsgGydZr4J4sIuxdFqvMAINmmg",
+    authDomain: "skillbridge-a82ff.firebaseapp.com",
+    projectId: "skillbridge-a82ff",
+    storageBucket: "skillbridge-a82ff.firebasestorage.app",
+    messagingSenderId: "818727034034",
+    appId: "1:818727034034:web:0ff63a127df7c8a60b7dab",
+    measurementId: "G-0D8TZKLSDW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</head>
 <body>
 
-<!-- NAVBAR -->
 <nav>
-<div class="logo">Skill<span>Bridge</span></div>
-
-<button class="btn btn-primary"
-onclick="document.getElementById('registerBox').style.display='flex'">
-Join Now
-</button>
+<a href="#" class="logo">Skill<span>Bridge</span></a>
+<div class="nav-links">
+<a href="#">Find Talent</a>
+<a href="#">Find Work</a>
+<a href="#">Why Us</a>
+<a href="#" class="btn btn-outline">Sign In</a>
+<a href="#" class="btn btn-primary">Join Now</a>
+</div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-<h1>Hire the best freelancers for any job</h1>
-<p>20% commission • Secure payments • Instant hiring</p>
+<div class="hero-content">
+<h1>Hire the best freelancers for any job, online.</h1>
+<p>Join 50,000+ businesses and freelancers earning securely on our platform.
+20% commission • Escrow Protection • Instant Payments</p>
+
+<div class="search-box">
+<input type="text" placeholder="Try 'Web Development' or 'Logo Design'">
+<button class="btn btn-primary">Search</button>
+</div>
+
+<div class="hero-stats">
+<div class="stat">
+<h3>50k+</h3>
+<p>Active Users</p>
+</div>
+<div class="stat">
+<h3>$2M+</h3>
+<p>Paid Out</p>
+</div>
+<div class="stat">
+<h3>98%</h3>
+<p>Satisfaction</p>
+</div>
+</div>
+</div>
+
+<div class="hero-visual floating">
+<div class="hero-card">
+<h3 style="margin-bottom: 1rem;">Top Rated Freelancers</h3>
+
+<div class="freelancer-preview">
+<div class="avatar">JD</div>
+<div>
+<div style="font-weight: bold;">John Doe</div>
+<div style="font-size: 0.9rem; opacity: 0.8;">Full Stack Developer</div>
+<div style="color: #ffb347; margin-top: 0.2rem;">★★★★★ $85/hr</div>
+</div>
+</div>
+
+<div class="freelancer-preview">
+<div class="avatar" style="background: linear-gradient(45deg, #667eea, #764ba2);">SM</div>
+<div>
+<div style="font-weight: bold;">Sarah Miller</div>
+<div style="font-size: 0.9rem; opacity: 0.8;">UI/UX Designer</div>
+<div style="color: #ffb347; margin-top: 0.2rem;">★★★★★ $65/hr</div>
+</div>
+</div>
+
+<div class="freelancer-preview">
+<div class="avatar" style="background: linear-gradient(45deg, #f093fb, #f5576c);">AK</div>
+<div>
+<div style="font-weight: bold;">Alex Kim</div>
+<div style="font-size: 0.9rem; opacity: 0.8;">SEO Expert</div>
+<div style="color: #ffb347; margin-top: 0.2rem;">★★★★★ $50/hr</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- FEATURES -->
 <section class="features">
-<h2>Why Choose SkillBridge?</h2>
-
+<h2 class="section-title">Why Choose SkillBridge?</h2>
+<div class="features-grid">
 <div class="feature-card">
+<div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
 <h3>Secure Escrow</h3>
-<p>Payments protected until work completion.</p>
+<p>Your payment is held securely until work is delivered. 100% money-back guarantee.</p>
 </div>
-
 <div class="feature-card">
-<h3>Low Commission</h3>
-<p>You earn 80% of project value.</p>
+<div class="feature-icon"><i class="fas fa-percentage"></i></div>
+<h3>Only 20% Commission</h3>
+<p>Lower fees than competitors. Freelancers keep 80% of every dollar earned.</p>
 </div>
-
 <div class="feature-card">
-<h3>Fast Hiring</h3>
-<p>Connect clients and freelancers instantly.</p>
+<div class="feature-icon"><i class="fas fa-bolt"></i></div>
+<h3>Instant Matching</h3>
+<p>AI-powered algorithm matches you with perfect freelancers within minutes.</p>
 </div>
-
+<div class="feature-card">
+<div class="feature-icon"><i class="fas fa-headset"></i></div>
+<h3>24/7 Support</h3>
+<p>Our dispute resolution team is always available to protect your interests.</p>
+</div>
+</div>
 </section>
 
-<!-- REGISTER POPUP -->
-<div id="registerBox">
-
-<div style="background:white;padding:30px;border-radius:10px;text-align:center">
-
-<h2>Create Account</h2>
-
-<input id="email" placeholder="Email"
-style="padding:10px;margin:10px;width:250px"><br>
-
-<input id="password" type="password" placeholder="Password"
-style="padding:10px;margin:10px;width:250px"><br>
-
-<button onclick="registerUser()" class="btn btn-primary">
-Register
-</button>
-
-<br><br>
-
-<button onclick="document.getElementById('registerBox').style.display='none'">
-Close
-</button>
-
-</div>
-</div>
-
-<!-- FIREBASE SCRIPT -->
-<script type="module">
-
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-
-import { getAuth, createUserWithEmailAndPassword }
-from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
-
-import { getFirestore, setDoc, doc }
-from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
-
-
-// 🔥 YOUR FIREBASE CONFIG
-const firebaseConfig = {
-apiKey: "AIzaSyCKCAcsZRsgGydZr4J4sIuxdFqvMAINmmg",
-authDomain: "skillbridge-a82ff.firebaseapp.com",
-projectId: "skillbridge-a82ff",
-storageBucket: "skillbridge-a82ff.firebasestorage.app",
-messagingSenderId: "818727034034",
-appId: "1:818727034034:web:0ff63a127df7c8a60b7dab"
-};
-
-
-// INIT FIREBASE
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-
-// REGISTER FUNCTION
-window.registerUser = async function () {
-
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
-
-if(!email || !password){
-alert("Enter email & password");
-return;
-}
-
-try{
-
-const userCredential =
-await createUserWithEmailAndPassword(auth,email,password);
-
-const user = userCredential.user;
-
-await setDoc(doc(db,"users",user.uid),{
-email:email,
-createdAt:new Date()
-});
-
-alert("✅ Account Created Successfully");
-
-document.getElementById("registerBox").style.display="none";
-
-}catch(error){
-alert(error.message);
-}
-
-};
-
-</script>
-
-</body>
-</html>
+<section class="how-it-works">
+<h2 class="section-title">How It Works</h2>
+<div class="steps">
+<div class="step">
+<div class="step-number">1</div>
+<h3>Post a Job</h3>
+<p>Describe your project and set your budget</p>
