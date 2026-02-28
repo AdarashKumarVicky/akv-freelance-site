@@ -426,31 +426,72 @@ animation: float 3s ease-in-out infinite;
   const analytics = getAnalytics(app);
 </script>
 </head>
-  <!-- REGISTER SECTION -->
-<section style="padding:60px; background:#ffffff; text-align:center;">
-  <h2>Create Your Account</h2>
+  <script>
+function openRegister() {
+  document.getElementById("registerBox").style.display = "flex";
+}
 
-  <input id="name" placeholder="Full Name" style="padding:10px;margin:10px;width:250px;"><br>
-
-  <input id="email" placeholder="Email" type="email"
-    style="padding:10px;margin:10px;width:250px;"><br>
-
-  <input id="password" placeholder="Password" type="password"
-    style="padding:10px;margin:10px;width:250px;"><br>
-
-  <select id="role" style="padding:10px;margin:10px;width:270px;">
-    <option value="freelancer">Freelancer</option>
-    <option value="client">Client</option>
-  </select><br>
-
-  <button onclick="registerUser()" 
-    style="padding:12px 25px;background:#1dbf73;color:white;border:none;">
-    Register
-  </button>
-
-  <p id="msg"></p>
-</section>
+function closeRegister() {
+  document.getElementById("registerBox").style.display = "none";
+}
+</script>
 <body>
+  <!-- REGISTER POPUP -->
+<div id="registerBox"
+style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:2000;
+justify-content:center;
+align-items:center;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:8px;
+width:350px;
+margin:100px auto;
+text-align:center;
+position:relative;
+">
+
+<button onclick="closeRegister()"
+style="
+position:absolute;
+right:10px;
+top:10px;
+border:none;
+background:red;
+color:white;
+padding:5px 10px;
+cursor:pointer;">
+X
+</button>
+
+<h2>Create Your Account</h2>
+
+<input id="name" type="text" placeholder="Full Name" style="width:100%;margin:10px 0;padding:8px;">
+  
+<input id="email" type="email" placeholder="Email" style="width:100%;margin:10px 0;padding:8px;">
+  
+<input id="password" type="password" placeholder="Password" style="width:100%;margin:10px 0;padding:8px;">
+  
+<select id="role" style="width:100%;margin:10px 0;padding:8px;">
+  
+  <option>Freelancer</option>
+<option>Client</option>
+</select>
+
+<button class="btn btn-primary" onclick="registerUser()">Register</button>
+  
+</div>
+</div>
 
 <nav>
 <a href="#" class="logo">Skill<span>Bridge</span></a>
@@ -459,7 +500,9 @@ animation: float 3s ease-in-out infinite;
 <a href="#">Find Work</a>
 <a href="#">Why Us</a>
 <a href="#" class="btn btn-outline">Sign In</a>
-<a href="#" class="btn btn-primary">Join Now</a>
+<button class="btn btn-primary" onclick="openRegister()">
+Join Now
+</button>
 </div>
 </nav>
 
