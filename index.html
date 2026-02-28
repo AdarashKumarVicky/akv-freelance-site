@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #2c3d53; -webkit-text-stroke: #2c3d53; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #2c3d53; -webkit-text-stroke: #2c3d53; background-color: #ffffff; min-height: 18.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">html</span></p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;SkillBridge - Freelancing Marketplace&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1">* {</span></p>
+<p class="p1"><span class="s1">margin: 0;</span></p>
+<p class="p1"><span class="s1">padding: 0;</span></p>
+<p class="p1"><span class="s1">box-sizing: border-box;</span></p>
+<p class="p1"><span class="s1">font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">:root {</span></p>
+<p class="p1"><span class="s1">--primary: #1dbf73;</span></p>
+<p class="p1"><span class="s1">--primary-dark: #19a463;</span></p>
+<p class="p1"><span class="s1">--secondary: #404145;</span></p>
+<p class="p1"><span class="s1">--accent: #ff62ad;</span></p>
+<p class="p1"><span class="s1">--bg: #f7f7f7;</span></p>
+<p class="p1"><span class="s1">--white: #ffffff;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">body {</span></p>
+<p class="p1"><span class="s1">background: var(--bg);</span></p>
+<p class="p1"><span class="s1">color: var(--secondary);</span></p>
+<p class="p1"><span class="s1">line-height: 1.6;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">nav {</span></p>
+<p class="p1"><span class="s1">background: var(--white);</span></p>
+<p class="p1"><span class="s1">padding: 1rem 5%;</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">justify-content: space-between;</span></p>
+<p class="p1"><span class="s1">align-items: center;</span></p>
+<p class="p1"><span class="s1">box-shadow: 0 2px 10px rgba(0,0,0,0.05);</span></p>
+<p class="p1"><span class="s1">position: sticky;</span></p>
+<p class="p1"><span class="s1">top: 0;</span></p>
+<p class="p1"><span class="s1">z-index: 1000;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.logo {</span></p>
+<p class="p1"><span class="s1">font-size: 1.8rem;</span></p>
+<p class="p1"><span class="s1">font-weight: 800;</span></p>
+<p class="p1"><span class="s1">color: var(--secondary);</span></p>
+<p class="p1"><span class="s1">text-decoration: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.logo span {</span></p>
+<p class="p1"><span class="s1">color: var(--primary);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.nav-links {</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">gap: 2rem;</span></p>
+<p class="p1"><span class="s1">align-items: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.nav-links a {</span></p>
+<p class="p1"><span class="s1">text-decoration: none;</span></p>
+<p class="p1"><span class="s1">color: var(--secondary);</span></p>
+<p class="p1"><span class="s1">font-weight: 500;</span></p>
+<p class="p1"><span class="s1">transition: color 0.3s;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.nav-links a:hover {</span></p>
+<p class="p1"><span class="s1">color: var(--primary);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.btn {</span></p>
+<p class="p1"><span class="s1">padding: 0.8rem 1.5rem;</span></p>
+<p class="p1"><span class="s1">border-radius: 4px;</span></p>
+<p class="p1"><span class="s1">text-decoration: none;</span></p>
+<p class="p1"><span class="s1">font-weight: 600;</span></p>
+<p class="p1"><span class="s1">transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1">border: none;</span></p>
+<p class="p1"><span class="s1">cursor: pointer;</span></p>
+<p class="p1"><span class="s1">display: inline-block;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.btn-primary {</span></p>
+<p class="p1"><span class="s1">background: var(--primary);</span></p>
+<p class="p1"><span class="s1">color: white;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.btn-primary:hover {</span></p>
+<p class="p1"><span class="s1">background: var(--primary-dark);</span></p>
+<p class="p1"><span class="s1">transform: translateY(-2px);</span></p>
+<p class="p1"><span class="s1">box-shadow: 0 5px 15px rgba(29, 191, 115, 0.3);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.btn-outline {</span></p>
+<p class="p1"><span class="s1">border: 2px solid var(--secondary);</span></p>
+<p class="p1"><span class="s1">color: var(--secondary);</span></p>
+<p class="p1"><span class="s1">background: transparent;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.btn-outline:hover {</span></p>
+<p class="p1"><span class="s1">background: var(--secondary);</span></p>
+<p class="p1"><span class="s1">color: white;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero {</span></p>
+<p class="p1"><span class="s1">background: linear-gradient(135deg, #0d084d 0%, #1dbf73 100%);</span></p>
+<p class="p1"><span class="s1">color: white;</span></p>
+<p class="p1"><span class="s1">padding: 5rem 5%;</span></p>
+<p class="p1"><span class="s1">display: grid;</span></p>
+<p class="p1"><span class="s1">grid-template-columns: 1fr 1fr;</span></p>
+<p class="p1"><span class="s1">gap: 3rem;</span></p>
+<p class="p1"><span class="s1">align-items: center;</span></p>
+<p class="p1"><span class="s1">min-height: 80vh;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-content h1 {</span></p>
+<p class="p1"><span class="s1">font-size: 3.5rem;</span></p>
+<p class="p1"><span class="s1">line-height: 1.2;</span></p>
+<p class="p1"><span class="s1">margin-bottom: 1.5rem;</span></p>
+<p class="p1"><span class="s1">font-weight: 700;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-content p {</span></p>
+<p class="p1"><span class="s1">font-size: 1.25rem;</span></p>
+<p class="p1"><span class="s1">margin-bottom: 2rem;</span></p>
+<p class="p1"><span class="s1">opacity: 0.9;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.search-box {</span></p>
+<p class="p1"><span class="s1">background: white;</span></p>
+<p class="p1"><span class="s1">padding: 1rem;</span></p>
+<p class="p1"><span class="s1">border-radius: 8px;</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">gap: 1rem;</span></p>
+<p class="p1"><span class="s1">box-shadow: 0 10px 30px rgba(0,0,0,0.2);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.search-box input {</span></p>
+<p class="p1"><span class="s1">flex: 1;</span></p>
+<p class="p1"><span class="s1">border: none;</span></p>
+<p class="p1"><span class="s1">outline: none;</span></p>
+<p class="p1"><span class="s1">font-size: 1rem;</span></p>
+<p class="p1"><span class="s1">padding: 0.5rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-stats {</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">gap: 2rem;</span></p>
+<p class="p1"><span class="s1">margin-top: 3rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.stat {</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.stat h3 {</span></p>
+<p class="p1"><span class="s1">font-size: 2rem;</span></p>
+<p class="p1"><span class="s1">font-weight: 700;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-visual {</span></p>
+<p class="p1"><span class="s1">position: relative;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-card {</span></p>
+<p class="p1"><span class="s1">background: rgba(255,255,255,0.1);</span></p>
+<p class="p1"><span class="s1">backdrop-filter: blur(10px);</span></p>
+<p class="p1"><span class="s1">border-radius: 16px;</span></p>
+<p class="p1"><span class="s1">padding: 2rem;</span></p>
+<p class="p1"><span class="s1">border: 1px solid rgba(255,255,255,0.2);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.freelancer-preview {</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">align-items: center;</span></p>
+<p class="p1"><span class="s1">gap: 1rem;</span></p>
+<p class="p1"><span class="s1">margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1">padding: 1rem;</span></p>
+<p class="p1"><span class="s1">background: rgba(255,255,255,0.1);</span></p>
+<p class="p1"><span class="s1">border-radius: 8px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.avatar {</span></p>
+<p class="p1"><span class="s1">width: 50px;</span></p>
+<p class="p1"><span class="s1">height: 50px;</span></p>
+<p class="p1"><span class="s1">border-radius: 50%;</span></p>
+<p class="p1"><span class="s1">background: linear-gradient(45deg, #ff62ad, #ffb347);</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">align-items: center;</span></p>
+<p class="p1"><span class="s1">justify-content: center;</span></p>
+<p class="p1"><span class="s1">font-weight: bold;</span></p>
+<p class="p1"><span class="s1">color: white;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.features {</span></p>
+<p class="p1"><span class="s1">padding: 5rem 5%;</span></p>
+<p class="p1"><span class="s1">background: var(--white);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.section-title {</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">font-size: 2.5rem;</span></p>
+<p class="p1"><span class="s1">margin-bottom: 3rem;</span></p>
+<p class="p1"><span class="s1">color: var(--secondary);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.features-grid {</span></p>
+<p class="p1"><span class="s1">display: grid;</span></p>
+<p class="p1"><span class="s1">grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</span></p>
+<p class="p1"><span class="s1">gap: 2rem;</span></p>
+<p class="p1"><span class="s1">max-width: 1200px;</span></p>
+<p class="p1"><span class="s1">margin: 0 auto;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.feature-card {</span></p>
+<p class="p1"><span class="s1">padding: 2rem;</span></p>
+<p class="p1"><span class="s1">border-radius: 12px;</span></p>
+<p class="p1"><span class="s1">background: var(--bg);</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">transition: transform 0.3s;</span></p>
+<p class="p1"><span class="s1">border: 2px solid transparent;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.feature-card:hover {</span></p>
+<p class="p1"><span class="s1">transform: translateY(-5px);</span></p>
+<p class="p1"><span class="s1">border-color: var(--primary);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.feature-icon {</span></p>
+<p class="p1"><span class="s1">font-size: 3rem;</span></p>
+<p class="p1"><span class="s1">color: var(--primary);</span></p>
+<p class="p1"><span class="s1">margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.how-it-works {</span></p>
+<p class="p1"><span class="s1">padding: 5rem 5%;</span></p>
+<p class="p1"><span class="s1">background: var(--bg);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.steps {</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">justify-content: space-between;</span></p>
+<p class="p1"><span class="s1">max-width: 1000px;</span></p>
+<p class="p1"><span class="s1">margin: 0 auto;</span></p>
+<p class="p1"><span class="s1">position: relative;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.steps::before {</span></p>
+<p class="p1"><span class="s1">content: '';</span></p>
+<p class="p1"><span class="s1">position: absolute;</span></p>
+<p class="p1"><span class="s1">top: 30px;</span></p>
+<p class="p1"><span class="s1">left: 20%;</span></p>
+<p class="p1"><span class="s1">right: 20%;</span></p>
+<p class="p1"><span class="s1">height: 4px;</span></p>
+<p class="p1"><span class="s1">background: var(--primary);</span></p>
+<p class="p1"><span class="s1">z-index: 0;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.step {</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">position: relative;</span></p>
+<p class="p1"><span class="s1">z-index: 1;</span></p>
+<p class="p1"><span class="s1">background: var(--bg);</span></p>
+<p class="p1"><span class="s1">padding: 0 1rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.step-number {</span></p>
+<p class="p1"><span class="s1">width: 60px;</span></p>
+<p class="p1"><span class="s1">height: 60px;</span></p>
+<p class="p1"><span class="s1">background: var(--primary);</span></p>
+<p class="p1"><span class="s1">color: white;</span></p>
+<p class="p1"><span class="s1">border-radius: 50%;</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">align-items: center;</span></p>
+<p class="p1"><span class="s1">justify-content: center;</span></p>
+<p class="p1"><span class="s1">font-size: 1.5rem;</span></p>
+<p class="p1"><span class="s1">font-weight: bold;</span></p>
+<p class="p1"><span class="s1">margin: 0 auto 1rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.categories {</span></p>
+<p class="p1"><span class="s1">padding: 5rem 5%;</span></p>
+<p class="p1"><span class="s1">background: var(--white);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.category-grid {</span></p>
+<p class="p1"><span class="s1">display: grid;</span></p>
+<p class="p1"><span class="s1">grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</span></p>
+<p class="p1"><span class="s1">gap: 1.5rem;</span></p>
+<p class="p1"><span class="s1">max-width: 1200px;</span></p>
+<p class="p1"><span class="s1">margin: 0 auto;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.category-card {</span></p>
+<p class="p1"><span class="s1">background: var(--bg);</span></p>
+<p class="p1"><span class="s1">padding: 2rem;</span></p>
+<p class="p1"><span class="s1">border-radius: 8px;</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">cursor: pointer;</span></p>
+<p class="p1"><span class="s1">transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1">border: 2px solid transparent;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.category-card:hover {</span></p>
+<p class="p1"><span class="s1">border-color: var(--primary);</span></p>
+<p class="p1"><span class="s1">transform: scale(1.05);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.category-card i {</span></p>
+<p class="p1"><span class="s1">font-size: 2.5rem;</span></p>
+<p class="p1"><span class="s1">color: var(--secondary);</span></p>
+<p class="p1"><span class="s1">margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1">display: block;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.trust {</span></p>
+<p class="p1"><span class="s1">background: var(--secondary);</span></p>
+<p class="p1"><span class="s1">color: white;</span></p>
+<p class="p1"><span class="s1">padding: 4rem 5%;</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.trust-logos {</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">justify-content: center;</span></p>
+<p class="p1"><span class="s1">gap: 3rem;</span></p>
+<p class="p1"><span class="s1">margin-top: 2rem;</span></p>
+<p class="p1"><span class="s1">opacity: 0.6;</span></p>
+<p class="p1"><span class="s1">font-size: 1.5rem;</span></p>
+<p class="p1"><span class="s1">font-weight: bold;</span></p>
+<p class="p1"><span class="s1">flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.cta {</span></p>
+<p class="p1"><span class="s1">padding: 5rem 5%;</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">background: linear-gradient(135deg, #f7f7f7 0%, #e8f5e9 100%);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.cta h2 {</span></p>
+<p class="p1"><span class="s1">font-size: 2.5rem;</span></p>
+<p class="p1"><span class="s1">margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">footer {</span></p>
+<p class="p1"><span class="s1">background: #222;</span></p>
+<p class="p1"><span class="s1">color: #999;</span></p>
+<p class="p1"><span class="s1">padding: 3rem 5%;</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.footer-links {</span></p>
+<p class="p1"><span class="s1">display: flex;</span></p>
+<p class="p1"><span class="s1">justify-content: center;</span></p>
+<p class="p1"><span class="s1">gap: 2rem;</span></p>
+<p class="p1"><span class="s1">margin-bottom: 2rem;</span></p>
+<p class="p1"><span class="s1">flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.footer-links a {</span></p>
+<p class="p1"><span class="s1">color: #999;</span></p>
+<p class="p1"><span class="s1">text-decoration: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.footer-links a:hover {</span></p>
+<p class="p1"><span class="s1">color: var(--primary);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">@media (max-width: 768px) {</span></p>
+<p class="p1"><span class="s1">.hero {</span></p>
+<p class="p1"><span class="s1">grid-template-columns: 1fr;</span></p>
+<p class="p1"><span class="s1">text-align: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-content h1 {</span></p>
+<p class="p1"><span class="s1">font-size: 2.5rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.steps {</span></p>
+<p class="p1"><span class="s1">flex-direction: column;</span></p>
+<p class="p1"><span class="s1">gap: 2rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.steps::before {</span></p>
+<p class="p1"><span class="s1">display: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.nav-links {</span></p>
+<p class="p1"><span class="s1">display: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-stats {</span></p>
+<p class="p1"><span class="s1">justify-content: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">@keyframes float {</span></p>
+<p class="p1"><span class="s1">0%, 100% { transform: translateY(0); }</span></p>
+<p class="p1"><span class="s1">50% { transform: translateY(-20px); }</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.floating {</span></p>
+<p class="p1"><span class="s1">animation: float 3s ease-in-out infinite;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;nav&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a href="#" class="logo"&gt;Skill&lt;span&gt;Bridge&lt;/span&gt;&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="nav-links"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a href="#"&gt;Find Talent&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a href="#"&gt;Find Work&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a href="#"&gt;Why Us&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a href="#" class="btn btn-outline"&gt;Sign In&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a href="#" class="btn btn-primary"&gt;Join Now&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/nav&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;section class="hero"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="hero-content"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Hire the best freelancers for any job, online.&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Join 50,000+ businesses and freelancers earning securely on our platform.</span></p>
+<p class="p1"><span class="s1">20% commission • Escrow Protection • Instant Payments&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="search-box"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;input type="text" placeholder="Try 'Web Development' or 'Logo Design'"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="btn btn-primary"&gt;Search&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="hero-stats"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="stat"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;50k+&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Active Users&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="stat"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;$2M+&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Paid Out&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="stat"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;98%&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Satisfaction&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="hero-visual floating"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="hero-card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 style="margin-bottom: 1rem;"&gt;Top Rated Freelancers&lt;/h3&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="freelancer-preview"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="avatar"&gt;JD&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="font-weight: bold;"&gt;John Doe&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="font-size: 0.9rem; opacity: 0.8;"&gt;Full Stack Developer&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="color: #ffb347; margin-top: 0.2rem;"&gt;★★★★★ $85/hr&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="freelancer-preview"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="avatar" style="background: linear-gradient(45deg, #667eea, #764ba2);"&gt;SM&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="font-weight: bold;"&gt;Sarah Miller&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="font-size: 0.9rem; opacity: 0.8;"&gt;UI/UX Designer&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="color: #ffb347; margin-top: 0.2rem;"&gt;★★★★★ $65/hr&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="freelancer-preview"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="avatar" style="background: linear-gradient(45deg, #f093fb, #f5576c);"&gt;AK&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="font-weight: bold;"&gt;Alex Kim&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="font-size: 0.9rem; opacity: 0.8;"&gt;SEO Expert&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div style="color: #ffb347; margin-top: 0.2rem;"&gt;★★★★★ $50/hr&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;section class="features"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="section-title"&gt;Why Choose SkillBridge?&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="features-grid"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="feature-card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="feature-icon"&gt;&lt;i class="fas fa-shield-alt"&gt;&lt;/i&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Secure Escrow&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Your payment is held securely until work is delivered. 100% money-back guarantee.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="feature-card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="feature-icon"&gt;&lt;i class="fas fa-percentage"&gt;&lt;/i&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Only 20% Commission&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Lower fees than competitors. Freelancers keep 80% of every dollar earned.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="feature-card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="feature-icon"&gt;&lt;i class="fas fa-bolt"&gt;&lt;/i&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Instant Matching&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;AI-powered algorithm matches you with perfect freelancers within minutes.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="feature-card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="feature-icon"&gt;&lt;i class="fas fa-headset"&gt;&lt;/i&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;24/7 Support&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Our dispute resolution team is always available to protect your interests.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;section class="how-it-works"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="section-title"&gt;How It Works&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="steps"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="step"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="step-number"&gt;1&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Post a Job&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Describe your project and set your budget&lt;/p&gt;</span></p>
+</body>
+</html>
