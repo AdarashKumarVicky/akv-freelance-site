@@ -408,7 +408,9 @@ animation: float 3s ease-in-out infinite;
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
     import { 
   getAuth, 
-  createUserWithEmailAndPassword 
+  createUserWithEmailAndPassword,
+        onAuthStateChanged
+
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
 import { 
@@ -436,6 +438,23 @@ import {
   const analytics = getAnalytics(app);
     const auth = getAuth(app);
 const db = getFirestore(app);
+
+
+/* ===== STEP 6 : AUTO LOGIN DETECTION ===== */
+
+import { onAuthStateChanged }
+from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+
+onAuthStateChanged(auth, (user) => {
+
+  if (user) {
+    console.log("User logged in:", user.email);
+
+    document.querySelector(".btn-primary").innerText =
+      "Welcome 👋";
+  }
+
+});
 
     window.registerUser = async function () {
 
