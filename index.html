@@ -436,6 +436,7 @@ import {
   const analytics = getAnalytics(app);
     const auth = getAuth(app);
 const db = getFirestore(app);
+
     window.registerUser = async function () {
 
   const name = document.getElementById("name").value;
@@ -472,6 +473,8 @@ const db = getFirestore(app);
     alert(error.message);
   }
 };
+    
+
 </script>
 </head>
   <script>
