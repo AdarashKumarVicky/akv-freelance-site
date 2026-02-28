@@ -450,7 +450,7 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("User logged in:", user.email);
 
-    document.querySelector(".btn-primary").innerText =
+    document.querySelector("joinBtn").innerText = 
       "Welcome 👋";
   }
 
@@ -570,7 +570,7 @@ X
 <a href="#">Find Work</a>
 <a href="#">Why Us</a>
 <a href="#" class="btn btn-outline">Sign In</a>
-<button class="btn btn-primary" onclick="openRegister()">
+<button id="joinBtn" class="btn btn-primary" onclick="openRegister()">
 Join Now
 </button>
 </div>
